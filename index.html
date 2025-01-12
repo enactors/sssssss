@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunDown</title>
+    <link rel="icon" type="image/x-icon" href="img/sundown-modified.png">
+    <meta  property="og:title" content="SunDown">
+    <meta property="og:description" content="Cheapest boosting services out right now.">
+    <meta property="og:image" content="https://sundown.wtf/img/sundown-modified.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Interactive Square Pattern */
+        .square-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(10, 10%);
+            grid-template-rows: repeat(10, 10%);
+            z-index: -1;
+        }
+
+        .square {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .square:hover {
+            background-color: rgb(255, 255, 255);
+            transform: scale(1.2);
+        }
+
+
+        .box {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            background-color: rgba(255, 255, 255, 0); 
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgb(255, 255, 255);
+            border: 1px solid rgb(255, 255, 255);
+            overflow: hidden;
+            backdrop-filter: blur(7px); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.1s;
+        }
+
+        .inner-box {
+            position: relative;
+            width: 45%;
+            height: 45%;
+            right: -270px;
+            background-image: url('/img/sundownheader.png'); /* Add your background image here */
+            background-size: cover;
+            opacity: 80%;
+            background-position: center;
+            border: 1px solid rgb(255, 255, 255); /* Black outline */
+            box-shadow: 0 0 30px rgb(255, 255, 255);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.1s ease;
+            backdrop-filter: blur(5px); /* Apply blur effect to the background */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 90px; /* Adjust logo size */
+            height: auto;
+            z-index: 10;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .button {
+            background-color: rgba(0, 0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #4f4f4f;
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5); /* Button hover shadow */
+        }
+
+/* Left side content inside the box */
+.left-content {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    z-index: 10;
+}
+
+.left-content h1 {
+    font-size: 50px;
+    margin: 0;
+    margin-top: px;
+    margin-left: 50px;
+    padding: 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgb(0, 0, 0); /* Glowing effect */
+}
+
+.left-content p {
+    font-size: 30px;
+    margin: 10px 0;
+    margin-left: 50px;
+    padding: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgb(0, 0, 0); /* Glowing effect */
+}
+
+.buy-now-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-left: 50px;
+    background-color: #ffffff00;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    margin-top: 150px;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgb(0, 0, 0); /* Glowing effect */
+}
+
+.buy-now-button:hover {
+    background-color: #4f4f4f;
+    box-shadow: 0 6px 12px rgba(210, 189, 189, 0.781); /* Button hover shadow */
+}
+
+    </style>
+</head>
+<body>
+
+    <audio id="background-audio" loop autoplay>
+        <source src="song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="box" id="tilt-box">
+        <div class="left-content">
+            <h1>SunDown.wtf</h1>
+            <p><small>Sundown is one of the cheapest services</small></p>
+            <p><small>out right now, our current services are</small></p>
+            <p><small> Discord boost, nitro, nitro tokens</small></p>
+            <p><small>boost bot, etc.</small></p>
+            <a href="purchase.html" target="_blank">
+                <button class="buy-now-button">Buy Now</button>
+            </a>
+        </div>
+
+        <div class="inner-box" id="inner-box">
+            <p></p>
+        </div>
+
+        <img src="img/sundown-modified.png" alt="Logo" class="logo">
+        <div class="buttons">
+            <a href="https://sundown.wtf" target="_blank"><button class="button">Home</button></a>
+            <a href="https://sundown.wtf/tos" target="_blank"><button class="button">TOS</button></a>
+            <a href="https://sundown.wtf/purchase" target="_blank"><button class="button">Purchase</button></a>
+            <a href="https://sundown.wtf/contacts" target="_blank"><button class="button">Contacts</button></a>
+        </div>
+    </div>
+
+    <script>
+        const box = document.getElementById('tilt-box');
+        const innerBox = document.getElementById('inner-box');
+
+        // Tilt effect for the large box
+        box.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = box.getBoundingClientRect();
+            const x = e.clientX - left;
+            const y = e.clientY - top;
+
+            const xRotation = ((y / height) - 0.5) * 30;
+            const yRotation = ((x / width) - 0.5) * -30;
+
+            box.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        box.addEventListener('mouseleave', () => {
+            box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+
+        // Tilt effect for the inner box inside the larger box
+        innerBox.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = innerBox.getBoundingClientRect();
+            const x = e.clientX - left;
+            const y = e.clientY - top;
+
+            const xRotation = ((y / height) - 0.5) * 15;
+            const yRotation = ((x / width) - 0.5) * -15;
+
+            innerBox.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        innerBox.addEventListener('mouseleave', () => {
+            innerBox.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+
+</body>
+</html>
