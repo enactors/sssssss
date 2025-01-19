@@ -158,14 +158,32 @@
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgb(0, 0, 0); /* Glowing effect */
 }
 
+.alert_button  {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-left: 50px;
+    background-color: #ffffff00;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    margin-top: 150px;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgb(0, 0, 0); /* Glowing effect */
+}
+
 .buy-now-button:hover {
+    background-color: #4f4f4f;
+    box-shadow: 0 6px 12px rgba(210, 189, 189, 0.781); /* Button hover shadow */
+}
+
+.alert_button:hover {
     background-color: #4f4f4f;
     box-shadow: 0 6px 12px rgba(210, 189, 189, 0.781); /* Button hover shadow */
 }
 
     </style>
 </head>
-<body>
 
     <audio id="background-audio" loop autoplay>
         <source src="song.mp3" type="audio/mp3">
@@ -180,6 +198,8 @@
             <p><small>boost bot, etc.</small></p>
             <a href="https://sundown.wtf/purchase" target="_blank">
                 <button class="buy-now-button">Buy Here</button>
+            <a href="https://sundown.wtf/updates" target="_blank">
+                <button class="alert_button">Alert!</button>
             </a>
         </div>
 
