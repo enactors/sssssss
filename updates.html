@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunDown</title>
+    <link rel="icon" type="image/x-icon" href="img/sundown-modified.png">
+    <meta  property="og:title" content="SunDown">
+    <meta property="og:description" content="Cheapest boosting services out right now.">
+    <meta property="og:image" content="https://sundown.wtf/img/sundown-modified.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 90px; /* Adjust logo size */
+            height: auto;
+            z-index: 10;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .button {
+            background-color: rgba(0, 0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+    <audio id="background-audio" loop autoplay>
+        <source src="song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+</audio>
+<body>
+    <center>
+    <pre style="color: white; margin: 0;">
+        ███████╗██╗   ██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗███╗   ██╗
+        ██╔════╝██║   ██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║████╗  ██║
+        ███████╗██║   ██║██╔██╗ ██║██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
+        ╚════██║██║   ██║██║╚██╗██║██║  ██║██║   ██║██║███╗██║██║╚██╗██║
+        ███████║╚██████╔╝██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
+        ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
+
+         First Update.
+       The current time is 1/19/2025, we have now added a ticket system to our discord server.
+       Our current customers have been, NotJeff (534794366980456478) & tired (1231630281379942462).
+           If you come in the SunDown server & make a ticket, we expect you to say something.
+           If you do not, this will resault in the ticket being closed & you will be muted.
+               Thank you for reading this and hopfully understanding.
+            The Current Period Of This Update Is: January 2025 - January 2025
+</pre>
+</center>
+        </div>
+
+        <img src="img/sundown-modified.png" alt="Logo" class="logo">
+
+    <script>
+        const box = document.getElementById('tilt-box');
+        const innerBox = document.getElementById('inner-box');
+
+        // Tilt effect for the large box
+        box.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = box.getBoundingClientRect();
+            const x = e.clientX - left;
+            const y = e.clientY - top;
+
+            const xRotation = ((y / height) - 0.5) * 30;
+            const yRotation = ((x / width) - 0.5) * -30;
+
+            box.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        box.addEventListener('mouseleave', () => {
+            box.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+
+        // Tilt effect for the inner box inside the larger box
+        innerBox.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = innerBox.getBoundingClientRect();
+            const x = e.clientX - left;
+            const y = e.clientY - top;
+
+            const xRotation = ((y / height) - 0.5) * 15;
+            const yRotation = ((x / width) - 0.5) * -15;
+
+            innerBox.style.transform = `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        });
+
+        innerBox.addEventListener('mouseleave', () => {
+            innerBox.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+    </script>
+
+</body>
+</html>
